@@ -1,0 +1,32 @@
+@import url("./layout/nav.css");
+@import url("./layout/header.css");
+@import url("./layout/main.css");
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1rem;
+    color: #1c1d1f;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em .5em;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
