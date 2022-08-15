@@ -6,6 +6,7 @@ header {
     align-items: center;
     padding: 0 20px;
     background-color: #f8f9fb;
+    width: 100%;
 }
 
 .header--img {
@@ -38,7 +39,6 @@ header {
     }
 
     .header--text {
-        width: 100%;
         box-shadow: none;
     }
 }
