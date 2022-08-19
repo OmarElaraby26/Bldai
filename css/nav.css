@@ -249,6 +249,10 @@
 }
 
 @media (max-width: 720px) {
+  .main-nav {
+    padding: 0 1.4rem;
+  }
+
   .main-nav>* {
     flex-direction: row-reverse;
     display: none;
