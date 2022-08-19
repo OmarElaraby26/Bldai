@@ -1,6 +1,8 @@
 @import url("./css/nav.css");
 @import url("./css/header.css");
-@import url("./css/main.css");
+@import url("./css/main/header.css");
+@import url("./css/main/courses.css");
+@import url("./css/main/categories.css");
 
 
 * {
