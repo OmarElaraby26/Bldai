@@ -10,15 +10,13 @@ const addListerToSearchBar = () => {
 
 async function reViewCourses() {
     if (!searchInput.value) return; // do nothing
-
-    const courses = await getCourses();
-    const filteredCourses = filter(courses, searchInput.value);
-    clearCourses();
-    await insertCourses(filteredCourses);
+    const courses = await getCourses(currentActiveTabButtonName);
+    filter(courses, searchInput.value);
+    replaceCourses(filteredCourses);
 }
 
 function filter(courses, val) {
-    return courses.filter(course => course.title.search(new RegExp(val, 'i')) !== -1)
+    courses.cards = courses.cards.filter(course => course.title.search(new RegExp(val, 'i')) !== -1)
 }
 
 addListerToSearchBar();

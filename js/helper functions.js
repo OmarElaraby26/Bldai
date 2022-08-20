@@ -5,10 +5,11 @@ function stringToHTML(str) {
     return doc.body.firstChild;
 }
 
-function addStars(element, numberOfStars) {
+function generateStars(numberOfStars) {
+    if (!numberOfStars) return '';
+    stars = '';
     for (let _ = 0; _ < numberOfStars; ++_) {
-        const star = document.createElement('i');
-        star.className = 'fa-solid fa-star';
-        element.appendChild(star);
+        stars += '<i class="fa-solid fa-star"></i>\n';
     }
+    return stars;
 }
