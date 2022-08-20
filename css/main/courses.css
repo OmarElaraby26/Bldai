@@ -1,5 +1,4 @@
 .courses-container {
-    /* todo: fix shadow */
     border: 1px solid #d1d7dc;
     background-color: transparent;
     padding: 1.5em 1em;
@@ -11,7 +10,11 @@
     margin: 0;
 }
 
-.course-intro p {
+.courses-section>div:nth-child(2) {
+    margin-top: 20px;
+}
+
+.courses-intro p {
     display: -webkit-box !important;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -21,39 +24,30 @@
     max-width: 90%;
 }
 
-.course-intro button:hover {
+.courses-intro button:hover {
     background-color: #eee;
 }
 
-/* cards-containers */
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-column-gap: 6px;
-    grid-row-gap: 6px;
-    margin-top: 1.5em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.card {
+.courses-card {
     background-color: transparent;
+    width: 100%;
+
 }
+
 
 .card-img>img {
     width: 100%;
 }
 
 
-.card h3 {
+.courses-card h3 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
 
-.card h3 a {
+.courses-card h3 a {
     text-decoration: none;
     color: inherit;
 }
@@ -65,4 +59,46 @@
 
 .card-review--star {
     color: gold
+}
+
+
+
+/* overwrite bootstrap owl carousel */
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: 24%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    background-color: #393b3f;
+}
+
+.owl-theme .owl-nav .disabled {
+    display: none;
+}
+
+.owl-prev {
+    left: -2rem;
+}
+
+.owl-next {
+    right: -2rem;
+}
+
+.owl-prev>span,
+.owl-next>span {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
 }
